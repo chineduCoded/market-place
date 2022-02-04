@@ -1,12 +1,12 @@
 import React from 'react'
-import { MdOutlineArrowDropDown }  from 'react-icons/md'
+import { MdArrowDropDown }  from 'react-icons/md'
 import styled from 'styled-components'
 
-const Icon = styled(MdOutlineArrowDropDown)`
+const Icon = styled(MdArrowDropDown)`
 width: 30px;
 height: 30px;
-border: 1px solid teal;
 border-radius: 3px;
+border: 2px solid teal;
 color: teal;
 position: fixed;
 bottom: 2rem;

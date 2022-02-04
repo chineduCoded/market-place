@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import watch from '../assets/watch2.png'
+import { NairaSymbol } from './NairaSymbol'
 
 
 const Container = styled.div`
@@ -10,6 +11,7 @@ const Container = styled.div`
 const Wrapper = styled.div`
 width: 100%;
 padding-top: 4rem;
+
 `
 
 const ContentWrapper = styled.div`
@@ -19,13 +21,15 @@ display: flex;
 align-items: center;
 justify-content: center;
 flex-wrap: wrap;
+
 `
 
 const ContentHolder = styled.div`
-width: 500px;
-height: 400px;
+width: min(500px, 100%);
 display: flex;
-align-items: center;
+justify-content: center;
+// align-items: center;
+padding: 3em;
 `
 
 const ImageHolder = styled.div`
@@ -50,11 +54,13 @@ text-transform: uppercase;
 
 const Title = styled.h1`
 text-transform: uppercase;
-margin-bottom: 30px;
+margin-bottom: 15px;
+font-size: clamp(1.5rem, 5vw, 2rem);
 `
 
 const Desc = styled.p`
-margin-bottom: 30px;
+margin-bottom: 15px;
+font-size: clamp(1rem, 1.25vw, 1.25rem);
 `
 
 const ButtonHolder = styled.div`
@@ -84,6 +90,10 @@ justify-content: center;
 align-items: center;
 `
 
+const Price = styled.h1`
+display: flex;
+`
+
 export const CenterComponent = () => {
     return (
         <Container>
@@ -97,6 +107,7 @@ export const CenterComponent = () => {
                                 A smartwatch is a wearable computer in the form of a watch; 
                                 modern smartwatches provide a local touchscreen interface for daily use, while an associated ...
                             </Desc>
+                            <Price><NairaSymbol />20,000</Price>
                             <ButtonHolder>
                                 <Button clr to="order">Order Now</Button>
                                 <Button to="info">Info</Button>

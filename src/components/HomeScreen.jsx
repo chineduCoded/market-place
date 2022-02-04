@@ -7,8 +7,8 @@ import { LogoComponent } from '../subcomponents/LogoComponent'
 
 const Container = styled.div`
 padding: 2rem;
-width: 100vw;
-height: 100vh;
+width: 100%;
+min-height: 100vh;
 position: relative;
 `
 
